@@ -29,10 +29,10 @@ void setup()
   nya.addARMarker("patt.hiro", 80);//id=0
   nya.addARMarker("patt.kanji", 80);//id=1
 
-  btc = new OBJModel(this, "btc.obj", "absolute", TRIANGLES);
+  btc = new OBJModel(this, "once.obj", "absolute", TRIANGLES);
   btc.enableDebug();
 
-  btc.scale(3);
+  btc.scale(1);
   btc.translateToCenter();
 
   cat = new OBJModel(this, "cat.obj", "absolute", TRIANGLES);
