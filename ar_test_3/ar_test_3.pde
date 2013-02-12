@@ -1,76 +1,84 @@
 /*
 trying to make ar program with objloader
-finna add new markers, more objects
+ finna add new markers, more objects
  */
 
 import saito.objloader.*;
 
-OBJModel model;
+OBJModel btc;
+OBJModel cat;
 float rotX, rotY;
 
 import processing.video.*;
 import jp.nyatla.nyar4psg.*;
 Capture cam;
-SingleARTKMarker nya;
+MultiMarker nya;
 
 
 void setup()
 {
-  size(800, 600, P3D);
+  size(640, 480, P3D);
   frameRate(30);
-
-  cam = new Capture(this, width, height);
-  nya = new SingleARTKMarker(this, width, height, "camera_para.dat");
-  nya.setARCodes("patt.hiro", 80);
-
-  model = new OBJModel(this, "btc.obj", "absolute", TRIANGLES);
-  model.enableDebug();
-
-  model.scale(3);
-  model.translateToCenter();
   
+  //String[] cameras = Capture.list();
+  //println(cameras);
+
+  cam = new Capture(this, width, height, "Cisco VT Advantage");
+
+  nya = new MultiMarker(this, width, height, "camera_para.dat");
+  nya.addARMarker("patt.hiro", 80);//id=0
+  nya.addARMarker("patt.kanji", 80);//id=1
+
+  btc = new OBJModel(this, "btc.obj", "absolute", TRIANGLES);
+  btc.enableDebug();
+
+  btc.scale(3);
+  btc.translateToCenter();
+
+  cat = new OBJModel(this, "cat.obj", "absolute", TRIANGLES);
+  cat.scale(0.05);
+  cat.translateToCenter();
+
   noStroke();
-  
-  
 }
-
-
 
 void draw()
 {
-  
   if (cam.available() !=true) {
     return;
   }
   background(129);
   lights();
-  
-  cam.read();
-  nya.drawBackground(cam);
-  switch(nya.detect(cam)){
-  case SingleARTKMarker.ST_NOMARKER:
-    return;
-  case SingleARTKMarker.ST_NEWMARKER:
-    println("Marker found.");
-    return;
-  case SingleARTKMarker.ST_UPDATEMARKER:
-    break;
-  case SingleARTKMarker.ST_REMOVEMARKER:
-    println("Marker removed.");
-    return;
-  default:
-    return;
-  }
-  
-  nya.beginTransform();//マーカ座標系に設定
-  {
-    setMatrix(nya.getMarkerMatrix());//マーカ姿勢をセット
-    rotateX(-5);
-    translate(0,50,10);
 
-    model.draw();
+  cam.read();
+  nya.detect(cam);
+  nya.drawBackground(cam);
+   for (int i=0;i<2;i++) {
+    if ((!nya.isExistMarker(i))) {
+      continue;
+    }
+    nya.beginTransform(i);
+    if (i==0) {
+      rotateX(-5);
+      translate(0, 50, 10);
+      btc.draw();
+    } else if (i==1) {
+      rotateX(4);
+      rotateY(1.3);
+      rotateZ(-0.5);
+      //println("X:" + rotX +" and Y:" + rotY);
+      translate(0, 30, -20);
+      cat.draw();
+    }
+    nya.endTransform();
   }
-  nya.endTransform();  //マーカ座標系を終了
-  
 }
+
+/* USE THIS TO ADJUST ROTATION IF NEEDED
+void mouseDragged()
+{
+    rotX += (mouseX - pmouseX) * 0.01;
+    rotY -= (mouseY - pmouseY) * 0.01;
+}
+*/
 

@@ -1,0 +1,44 @@
+newmtl __DarkGoldenrod_1noCullingID
+Ka 0.000000 0.000000 0.000000
+Kd 0.806937 0.467791 0.028427
+Ks 0.088979 0.088979 0.088979
+illum 2
+Ns 512.000000
+Tr 0.130000
+map_Kd __DarkGoldenrod_1noCullingID - Default Texture.psd 
+
+newmtl __Black_noCullingID
+Ka 0.000000 0.000000 0.000000
+Kd 0.000000 0.000000 0.000000
+Ks 0.088979 0.088979 0.088979
+illum 2
+Ns 512.000000
+Tr 0.000000
+map_Kd __Black_noCullingID - Default Texture.psd 
+
+newmtl FrontColorNoCullingID
+Ka 0.000000 0.000000 0.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.088979 0.088979 0.088979
+illum 2
+Ns 512.000000
+Tr 0.000000
+map_Kd FrontColorNoCullingID - Default Texture.psd 
+
+newmtl ForegroundColorID
+Ka 0.000000 0.000000 0.000000
+Kd 0.000000 0.000000 0.000000
+Ks 0.088979 0.088979 0.088979
+illum 2
+Ns 512.000000
+Tr 0.000000
+
+newmtl SKIN1ID
+Ka 0.000000 0.000000 0.000000
+Kd 0.462067 0.068488 0.184473
+Ks 0.088979 0.088979 0.088979
+illum 2
+Ns 512.000000
+Tr 0.000000
+map_Kd SKIN1ID - Default Texture.psd 
+
