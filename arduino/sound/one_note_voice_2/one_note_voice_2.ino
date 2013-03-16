@@ -1,6 +1,6 @@
 #include "pitches.h"  
 
-int pushButton = 8;
+
 int freqs[] = {
   18, 20, 40, 94, 220, 208, 233, 247, 262,
   277, 294, 311, 330, 331, 332, 333,
@@ -13,7 +13,8 @@ int freqs[] = {
   379,380,381,382,383,384,385,386,387,388,389,
   390,391,392,393,394};
 
-#define soundPin 5
+#definte pushButton 13
+#define soundPin 9
 
 long constant = 30000;
 int notelength = 20;
@@ -28,28 +29,11 @@ void setup(){
 
 void loop(){
 
-  if ( Serial.available()) {
-    char ch = Serial.read();
-    switch(ch) {
-    case 'w':
-      s++;
-      break;
-    case's':
-      s--;
-      break;
-    }
-    Serial.println(s);
-
-  }
-
-
   int buttonState = digitalRead(pushButton);
+  Serial.println(buttonState);
   if (buttonState == 1) {
-    Serial.println(buttonState);
-
     tone(soundPin, freqs[random(sizeof(freqs))], 40);
     delay(random(20, 80));
-
   }
 }
 
