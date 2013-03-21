@@ -13,7 +13,7 @@ int freqs[] = {
   379,380,381,382,383,384,385,386,387,388,389,
   390,391,392,393,394};
 
-#definte pushButton 13
+//#definte pushButton 13
 #define soundPin 9
 
 long constant = 30000;
@@ -24,17 +24,17 @@ void setup(){
 
   Serial.begin(9600);
   pinMode(soundPin, OUTPUT);
-  pinMode(pushButton, INPUT);
+ // pinMode(pushButton, INPUT);
 }
 
 void loop(){
 
-  int buttonState = digitalRead(pushButton);
-  Serial.println(buttonState);
-  if (buttonState == 1) {
+  //int buttonState = digitalRead(pushButton);
+//  Serial.println(buttonState);
+ // if (buttonState == 1) {
     tone(soundPin, freqs[random(sizeof(freqs))], 40);
     delay(random(20, 80));
-  }
+ // }
 }
 
 

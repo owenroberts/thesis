@@ -22,11 +22,13 @@ void setup() {
   //font = loadFont("");
   textSize(fontSize);
 
-  background(0, 0, 0);
+  
   colorMode(HSB, 360, 100, 100);
   fill(270, 20, 100);
   stroke(0, 10, 40);
   strokeWeight(5);
+  
+  background(0, 0, 100);
   
 }
 
@@ -44,8 +46,7 @@ void draw() {
   
   
   fill(0);
-  String s="Ş";
-  text(lines[2], rectBorder + textBorder, video.height + rectBorder + textBorder, width - 2*rectBorder - 2*textBorder, height - video.height - 2*rectBorder - 2*textBorder);
+  text(lines[3], rectBorder + textBorder, video.height + rectBorder + textBorder, width - 2*rectBorder - 2*textBorder, height - video.height - 2*rectBorder - 2*textBorder);
   
   
   

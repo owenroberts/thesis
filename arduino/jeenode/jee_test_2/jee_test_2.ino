@@ -38,7 +38,7 @@ void setup () {
   rf12_initialize(1, RF12_868MHZ, 33);
   pinMode(ledPin, OUTPUT);
   //pinMode(15, OUTPUT);
-  spine.attach(5);
+  spine.attach(4);
   //spine.setMaximumPulse(1600);
 }
 
