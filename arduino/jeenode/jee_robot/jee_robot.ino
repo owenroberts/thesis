@@ -19,6 +19,10 @@ int freqs[] = {
   368,369,370,371,372,373,374,375,376,377,378,
   379,380,381,382,383,384,385,386,387,388,389,
   390,391,392,393,394};
+  
+int purr[] = {
+  18, 20, 40, 94, 220, 208, 233, 247, 262, 277, 294
+};
 
 
 MilliTimer sendTimer;
@@ -105,6 +109,12 @@ void loop () {
       for (int i = 0; i < 20; i++) {
         tone(soundPin, freqs[random(sizeof(freqs))], 40);
         delay(random(20, 80));
+      }
+      break;
+    case 'p':
+      for (int i = 0; i < 15; i++) {
+        tone(soundPin, purr[random(sizeof(purr))], 50);
+        delay(random(10, 50));
       }
       break;
     }

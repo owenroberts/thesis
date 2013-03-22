@@ -13,7 +13,12 @@ int freqs[] = {
   379,380,381,382,383,384,385,386,387,388,389,
   390,391,392,393,394};
 
-#define soundPin 15
+int purr[] = {
+  18, 19
+};
+
+
+#define soundPin 5
 
 long constant = 30000;
 int notelength = 20;
@@ -46,9 +51,16 @@ void loop(){
       break;
     case 'u':
       for (int i = 0; i < 20; i++) {
-        tone(soundPin, freqs[random(sizeof(freqs))], 40);
+        tone(soundPin, freqs[random(sizeof(freqs))], random(20,60));
         delay(random(20, 80));
       }
+      break;
+    case 'p':
+      for (int i = 0; i < 200; i++) {
+        tone(soundPin, purr[random(sizeof(purr))], 40);
+        delay(random(5,20));
+      }
+
       break;
     }
 
