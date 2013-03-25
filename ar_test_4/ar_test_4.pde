@@ -30,8 +30,8 @@ void setup()
   cam = new Capture(this, width, height);
 
   nya = new MultiMarker(this, width, height, "camera_para.dat");
-  nya.addARMarker("marker16.pat", 80);//id=0
-  nya.addARMarker("patt.kanji", 80);//id=1
+  nya.addARMarker("patt.hiro", 80);//id=0
+  nya.addARMarker("cat_1.pat", 80);//id=1
 
   btc = new OBJModel(this, "once.obj", "absolute", TRIANGLES);
   btc.enableDebug();
