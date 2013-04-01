@@ -21,7 +21,7 @@ int freqs[] = {
   390,391,392,393,394};
   
 int purr[] = {
-  18, 20, 40, 94, 220, 208, 233, 247, 262, 277, 294
+  18, 19
 };
 
 
@@ -61,10 +61,10 @@ void setup () {
   Serial.println(57600);
   Serial.println("Send and Receive");
   rf12_initialize(1, RF12_868MHZ, 33);
-  //pinMode(15, OUTPUT);
+  pinMode(16, OUTPUT);
   right.attach(4);
   left.attach(5);
-  back.attach(6);
+  back.attach(16);
   spine.attach(7);
   pinMode(soundPin, OUTPUT);
 
@@ -112,9 +112,9 @@ void loop () {
       }
       break;
     case 'p':
-      for (int i = 0; i < 15; i++) {
-        tone(soundPin, purr[random(sizeof(purr))], 50);
-        delay(random(10, 50));
+      for (int i = 0; i < 200; i++) {
+        tone(soundPin, purr[random(sizeof(purr))], 40);
+        delay(random(5,20));
       }
       break;
     }
@@ -185,13 +185,34 @@ void loop () {
       SoftwareServo::refresh();
       SoftwareServo::refresh();
       SoftwareServo::refresh();
-      left.write(frontAngle-20);
+      left.write(180-frontAngle-20);
       delay(100);
       SoftwareServo::refresh();
       SoftwareServo::refresh();
       delay(100);
       SoftwareServo::refresh();
-      left.write(frontAngle);
+      left.write(180 - frontAngle);
+      break;
+      
+      case 't':
+      SoftwareServo::refresh();
+      right.write(frontAngle-20);
+      delay(100);
+      SoftwareServo::refresh();
+      SoftwareServo::refresh();
+      delay(100);
+      SoftwareServo::refresh();
+      right.write(frontAngle);
+      SoftwareServo::refresh();
+      SoftwareServo::refresh();
+      SoftwareServo::refresh();
+      left.write(180-frontAngle+20);
+      delay(100);
+      SoftwareServo::refresh();
+      SoftwareServo::refresh();
+      delay(100);
+      SoftwareServo::refresh();
+      left.write(180-frontAngle);
       break;
 
 
@@ -199,27 +220,28 @@ void loop () {
     case 'e':
       SoftwareServo::refresh();
       right.write(frontAngle+20);
-      delay(500);
+      delay(200);
       SoftwareServo::refresh();
       SoftwareServo::refresh();
-      delay(500);
+      delay(200);
       SoftwareServo::refresh();
       right.write(frontAngle);
       SoftwareServo::refresh();
       SoftwareServo::refresh();
       SoftwareServo::refresh();
-      left.write(frontAngle-20);
-      delay(500);
+      left.write(180-frontAngle-20);
+      delay(200);
       SoftwareServo::refresh();
       SoftwareServo::refresh();
-      delay(500);
+      delay(200);
       SoftwareServo::refresh();
-      left.write(frontAngle);
+      left.write(180-frontAngle);
       break;
 
     }
 
     SoftwareServo::refresh();
+    needToSend = 1;
 
   }
 

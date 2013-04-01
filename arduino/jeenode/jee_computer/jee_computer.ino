@@ -7,15 +7,9 @@
 
 #include <JeeLib.h>
 
-
-
 MilliTimer sendTimer;
 char payload[] = "cv";
 byte needToSend;
-
-
-
-
 
 void setup () {
   Serial.begin(57600);
@@ -44,7 +38,6 @@ void loop () {
     needToSend = 1;
   }
 
-
   if (needToSend && rf12_canSend()) {
     needToSend = 0;
     //Serial.println(payload[0]);
@@ -54,6 +47,7 @@ void loop () {
   }
 
 }
+
 
 
 

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="27" version="2.0">
+<workbench progressCount="20" version="2.0">
 <workbenchAdvisor/>
 <window height="1028" maximized="true" width="1676" x="-10" y="22">
 <fastViewData fastViewLocation="1024"/>
@@ -15,10 +15,10 @@
 <coolItem id="adt.actionSet.wizards" itemType="typeToolBarContribution" x="32" y="22"/>
 <coolItem id="org.eclipse.debug.ui.launchActionSet" itemType="typeToolBarContribution" x="100" y="22"/>
 <coolItem id="org.eclipse.jdt.ui.JavaElementCreationActionSet" itemType="typeToolBarContribution" x="62" y="22"/>
-<coolItem id="org.eclipse.search.searchActionSet" itemType="typeToolBarContribution" x="84" y="22"/>
-<coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="32" y="22"/>
+<coolItem id="org.eclipse.search.searchActionSet" itemType="typeToolBarContribution" x="62" y="22"/>
+<coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="98" y="22"/>
 <coolItem id="org.eclipse.wst.xml.ui.perspective.NewFileToolBar" itemType="typeToolBarContribution" x="-1" y="-1"/>
-<coolItem id="org.eclipse.wst.xml.ui.design.DesignToolBar" itemType="typeToolBarContribution" x="54" y="22"/>
+<coolItem id="org.eclipse.wst.xml.ui.design.DesignToolBar" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="org.eclipse.debug.ui.launch.toolbar" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="org.eclipse.debug.ui.main.toolbar" itemType="typeToolBarContribution" x="32" y="22"/>
 <coolItem id="group.nav" itemType="typeGroupMarker"/>
@@ -27,7 +27,7 @@
 <coolItem id="org.eclipse.cdt.make.editor" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="org.eclipse.cdt.ui.editor.CEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="org.eclipse.jdt.ui.PropertiesFileEditor" itemType="typePlaceholder" x="-1" y="-1"/>
-<coolItem id="org.eclipse.jdt.ui.CompilationUnitEditor" itemType="typePlaceholder" x="-1" y="-1"/>
+<coolItem id="org.eclipse.jdt.ui.CompilationUnitEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="com.android.ide.eclipse.editors.CommonXmlEditor" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="group.help" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.help" itemType="typeToolBarContribution" x="-1" y="-1"/>
@@ -39,13 +39,33 @@
 <folder appearance="1" expanded="2">
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
 <part id="0"/>
+<part id="1"/>
+<part id="2"/>
+<part id="3"/>
+<part id="4"/>
 </presentation>
 </folder>
 </info>
 </editorArea>
-<editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="ImageTargets.cpp" partName="ImageTargets.cpp" path="/Users/owenroberts/Desktop/owen/ITP/thesis/code/android/ImageTests/jni/ImageTargets.cpp" title="ImageTargets.cpp" tooltip="ImageTests/jni/ImageTargets.cpp" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ImageTests/jni/ImageTargets.cpp"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="13271" selectionTopPixel="5544"/>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ImageTargetsRenderer.java" partName="ImageTargetsRenderer.java" path="/Applications/adt-bundle-mac-x86_64-20130219/vuforia-sdk-android-2-0-31/samples/ImageTargets-2-0-7/src/com/qualcomm/QCARSamples/ImageTargets/ImageTargetsRenderer.java" title="ImageTargetsRenderer.java" tooltip="ImageTargets/src/com/qualcomm/QCARSamples/ImageTargets/ImageTargetsRenderer.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ImageTargets/src/com/qualcomm/QCARSamples/ImageTargets/ImageTargetsRenderer.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="81" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="ImageTargets.cpp" partName="ImageTargets.cpp" path="/Applications/adt-bundle-mac-x86_64-20130219/vuforia-sdk-android-2-0-31/samples/ImageTargets-2-0-7/jni/ImageTargets.cpp" title="ImageTargets.cpp" tooltip="ImageTargets/jni/ImageTargets.cpp" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ImageTargets/jni/ImageTargets.cpp"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="12981" selectionTopPixel="6020"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="banana.h" partName="banana.h" path="/Applications/adt-bundle-mac-x86_64-20130219/vuforia-sdk-android-2-0-31/samples/ImageTargets-2-0-7/jni/banana.h" title="banana.h" tooltip="ImageTargets/jni/banana.h" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ImageTargets/jni/banana.h"/>
+<editorState selectionHorizontalPixel="0" selectionLength="14" selectionOffset="450" selectionTopPixel="20"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="Teapot.h" partName="Teapot.h" path="/Applications/adt-bundle-mac-x86_64-20130219/vuforia-sdk-android-2-0-31/samples/ImageTargets-2-0-7/Teapot.h" title="Teapot.h" tooltip="ImageTargets/Teapot.h" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ImageTargets/Teapot.h"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="554" selectionTopPixel="130"/>
+</editor>
+<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ImageTargets.java" partName="ImageTargets.java" path="/Applications/adt-bundle-mac-x86_64-20130219/vuforia-sdk-android-2-0-31/samples/ImageTargets-2-0-7/src/com/qualcomm/QCARSamples/ImageTargets/ImageTargets.java" title="ImageTargets.java" tooltip="ImageTargets/src/com/qualcomm/QCARSamples/ImageTargets/ImageTargets.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ImageTargets/src/com/qualcomm/QCARSamples/ImageTargets/ImageTargets.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="81" selectionTopPixel="384"/>
 </editor>
 </editors>
 <views>
@@ -110,7 +130,7 @@
 <view id="com.android.ide.eclipse.ddms.views.AllocTrackerView" partName="Allocation Tracker"/>
 <view id="org.eclipse.jdt.ui.JavadocView" partName="Javadoc"/>
 </views>
-<perspectives activePart="org.eclipse.jdt.ui.PackageExplorer" activePerspective="org.eclipse.jdt.ui.JavaPerspective">
+<perspectives activePart="org.eclipse.ui.console.ConsoleView" activePerspective="org.eclipse.jdt.ui.JavaPerspective">
 <perspective editorAreaTrimState="2" editorAreaVisible="0" fixed="0" version="0.016">
 <descriptor class="com.android.ide.eclipse.ddms.Perspective" id="com.android.ide.eclipse.ddms.Perspective" label="DDMS"/>
 <alwaysOnActionSet id="org.eclipse.ui.cheatsheets.actionSet"/>
@@ -318,164 +338,167 @@
 <workingSets/>
 <navigationHistory>
 <editors>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ImageTests/jni/ImageTargets.cpp"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ImageTests/jni/Beware.h"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ImageTests/jni/skull.h"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ImageTests/jni/Teapot.h"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.manifest.ManifestEditor" path="/ImageTests/AndroidManifest.xml"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.manifest.ManifestEditor" path="/ImageTests/res/AndroidManifest.xml"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ImageTests/jni/ImageTargets.cpp"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ImageTests/jni/Teapot.h"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ImageTargets/jni/ImageTargets.cpp"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/ImageTargets/src/com/qualcomm/QCARSamples/ImageTargets/AboutScreen.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.PropertiesFileEditor" path="/ImageTargets/project.properties"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ImageTests/jni/ImageTargets.cpp"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ImageTests/jni/Beware.h"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.CommonXmlEditor" path="/ImageTests/res/values/strings.xml"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ImageTests/jni/Beware.h"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ImageTests/jni/ImageTargets.cpp"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ImageTargets/jni/CubeShaders.h"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/ImageTargets/src/com/qualcomm/QCARSamples/ImageTargets/ImageTargets.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/ImageTargets/src/com/qualcomm/QCARSamples/ImageTargets/ImageTargetsRenderer.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ImageTargets/jni/banana.h"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/ImageTests/src/com/qualcomm/QCARSamples/ImageTargets/ImageTargets.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/ImageTests/src/com/qualcomm/QCARSamples/ImageTargets/ImageTargetsSplashScreen.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/ImageTests/src/com/qualcomm/QCARSamples/ImageTargets/ImageTargetsRenderer.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ImageTargets/jni/banana.h"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ImageTargets/Teapot.h"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/ImageTargets/src/com/qualcomm/QCARSamples/ImageTargets/ImageTargets.java"/>
 </editors>
-<item historyLabel="ImageTargets.cpp" index="0">
-<position info="not_deleted" x="12446" y="0"/>
+<item historyLabel="ImageTargets.java" index="2">
+<position/>
 </item>
-<item historyLabel="Beware.h" index="1">
-<position info="not_deleted" x="239" y="27"/>
+<item historyLabel="ImageTargetsRenderer.java" index="3">
+<position info="not_deleted" x="492" y="0"/>
 </item>
-<item historyLabel="ImageTargets.cpp" index="0">
-<position info="not_deleted" x="11160" y="0"/>
+<item historyLabel="banana.h" index="4">
+<position/>
 </item>
-<item historyLabel="skull.h" index="2">
+<item historyLabel="ImageTargetsRenderer.java" index="3">
+<position info="not_deleted" x="492" y="0"/>
+</item>
+<item historyLabel="ImageTargets.java" index="2">
+<position/>
+</item>
+<item historyLabel="CubeShaders.h" index="1">
 <position info="not_deleted" x="0" y="0"/>
 </item>
 <item historyLabel="ImageTargets.cpp" index="0">
+<position info="not_deleted" x="958" y="0"/>
+</item>
+<item historyLabel="banana.h" index="4">
+<position info="not_deleted" x="363" y="0"/>
+</item>
+<item historyLabel="ImageTargets.cpp" index="0">
+<position info="not_deleted" x="1159" y="0"/>
+</item>
+<item historyLabel="banana.h" index="4">
+<position info="not_deleted" x="229" y="142"/>
+</item>
+<item historyLabel="ImageTargets.cpp" index="0">
+<position info="not_deleted" x="12098" y="0"/>
+</item>
+<item historyLabel="banana.h" index="4">
+<position info="not_deleted" x="386" y="46"/>
+</item>
+<item historyLabel="ImageTargets.cpp" index="0">
+<position info="not_deleted" x="17229" y="7"/>
+</item>
+<item historyLabel="ImageTargets.java" index="2">
+<position info="not_deleted" x="12409" y="0"/>
+</item>
+<item historyLabel="ImageTargets.java" index="5">
+<position info="not_deleted" x="12327" y="130"/>
+</item>
+<item historyLabel="ImageTargets.java" index="2">
+<position info="not_deleted" x="12376" y="0"/>
+</item>
+<item historyLabel="ImageTargets.cpp" index="0">
+<position info="not_deleted" x="18542" y="7"/>
+</item>
+<item historyLabel="ImageTargetsSplashScreen.java" index="6">
+<position info="not_deleted" x="81" y="0"/>
+</item>
+<item historyLabel="ImageTargetsRenderer.java" index="7">
+<position info="not_deleted" x="81" y="0"/>
+</item>
+<item historyLabel="ImageTargetsSplashScreen.java" index="6">
+<position info="not_deleted" x="81" y="0"/>
+</item>
+<item historyLabel="ImageTargets.cpp" index="0">
+<position info="not_deleted" x="18542" y="7"/>
+</item>
+<item historyLabel="ImageTargetsRenderer.java" index="3">
+<position info="not_deleted" x="81" y="0"/>
+</item>
+<item historyLabel="ImageTargets.cpp" index="0">
+<position info="not_deleted" x="13684" y="178"/>
+</item>
+<item historyLabel="banana.h" index="8">
+<position info="not_deleted" x="104" y="0"/>
+</item>
+<item historyLabel="ImageTargets.cpp" index="0">
+<position info="not_deleted" x="11635" y="10"/>
+</item>
+<item historyLabel="Teapot.h" index="9">
+<position info="not_deleted" x="574" y="45"/>
+</item>
+<item historyLabel="ImageTargets.cpp" index="0">
+<position info="not_deleted" x="11635" y="10"/>
+</item>
+<item historyLabel="banana.h" index="8">
+<position info="not_deleted" x="507" y="0"/>
+</item>
+<item historyLabel="ImageTargetsRenderer.java" index="3">
+<position info="not_deleted" x="81" y="0"/>
+</item>
+<item historyLabel="ImageTargets.cpp" index="0">
+<position info="not_deleted" x="13732" y="0"/>
+</item>
+<item historyLabel="Teapot.h" index="9">
+<position info="not_deleted" x="556" y="13"/>
+</item>
+<item historyLabel="banana.h" index="8">
+<position info="not_deleted" x="488" y="0"/>
+</item>
+<item historyLabel="Teapot.h" index="9">
+<position info="not_deleted" x="556" y="13"/>
+</item>
+<item historyLabel="banana.h" index="8">
+<position info="not_deleted" x="385" y="0"/>
+</item>
+<item historyLabel="Teapot.h" index="9">
+<position info="not_deleted" x="556" y="13"/>
+</item>
+<item historyLabel="ImageTargets.cpp" index="0">
 <position/>
 </item>
-<item historyLabel="skull.h" index="2">
-<position info="not_deleted" x="224" y="88"/>
-</item>
-<item historyLabel="ImageTargets.cpp" index="0">
-<position info="not_deleted" x="11737" y="0"/>
-</item>
-<item historyLabel="skull.h" index="2">
-<position info="not_deleted" x="327" y="46"/>
-</item>
-<item historyLabel="ImageTargets.cpp" index="0">
-<position/>
-</item>
-<item historyLabel="skull.h" index="2">
-<position info="not_deleted" x="327" y="46"/>
-</item>
-<item historyLabel="ImageTargets.cpp" index="0">
-<position/>
-</item>
-<item historyLabel="skull.h" index="2">
-<position info="not_deleted" x="327" y="46"/>
-</item>
-<item historyLabel="ImageTargets.cpp" index="0">
-<position/>
-</item>
-<item historyLabel="Beware.h" index="1">
-<position info="not_deleted" x="239" y="27"/>
-</item>
-<item historyLabel="Teapot.h" index="3">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="ImageTargets.cpp" index="0">
-<position info="not_deleted" x="11614" y="0"/>
-</item>
-<item historyLabel="Teapot.h" index="3">
+<item historyLabel="Teapot.h" index="9">
 <position info="not_deleted" x="575" y="14"/>
 </item>
-<item historyLabel="Beware.h" index="1">
-<position info="not_deleted" x="239" y="27"/>
+<item historyLabel="ImageTargets.cpp" index="0">
+<position info="not_deleted" x="12791" y="11"/>
 </item>
-<item historyLabel="Teapot.h" index="3">
-<position info="not_deleted" x="575" y="14"/>
+<item historyLabel="Teapot.h" index="9">
+<position info="not_deleted" x="72357" y="0"/>
+</item>
+<item historyLabel="banana.h" index="8">
+<position info="not_deleted" x="385" y="0"/>
+</item>
+<item historyLabel="Teapot.h" index="9">
+<position info="not_deleted" x="72357" y="0"/>
+</item>
+<item historyLabel="banana.h" index="8">
+<position info="not_deleted" x="3762434" y="15"/>
+</item>
+<item historyLabel="ImageTargetsRenderer.java" index="3">
+<position info="not_deleted" x="81" y="0"/>
 </item>
 <item historyLabel="ImageTargets.cpp" index="0">
-<position info="not_deleted" x="13247" y="0"/>
+<position info="not_deleted" x="13785" y="11"/>
 </item>
-<item historyLabel="Teapot.h" index="3">
-<position info="not_deleted" x="484" y="24"/>
+<item historyLabel="banana.h" index="8">
+<position info="not_deleted" x="1900864" y="13"/>
 </item>
 <item historyLabel="ImageTargets.cpp" index="0">
-<position info="not_deleted" x="13247" y="0"/>
+<position info="not_deleted" x="13581" y="14"/>
 </item>
-<item historyLabel="ImageTests Manifest" index="4"/>
+<item historyLabel="banana.h" index="8">
+<position info="not_deleted" x="450" y="14"/>
+</item>
+<item historyLabel="Teapot.h" index="9">
+<position info="not_deleted" x="554" y="0"/>
+</item>
 <item historyLabel="ImageTargets.cpp" index="0">
-<position info="not_deleted" x="13223" y="24"/>
+<position info="not_deleted" x="12981" y="0"/>
 </item>
-<item historyLabel="ImageTests Manifest" index="5"/>
-<item historyLabel="ImageTargets.cpp" index="0">
-<position info="not_deleted" x="13223" y="24"/>
-</item>
-<item historyLabel="ImageTests Manifest" index="5"/>
-<item historyLabel="ImageTargets.cpp" index="6">
-<position info="not_deleted" x="12998" y="60"/>
-</item>
-<item historyLabel="Teapot.h" index="7">
-<position info="not_deleted" x="484" y="24"/>
-</item>
-<item historyLabel="ImageTargets.cpp" index="8">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="ImageTargets.cpp" index="8">
-<position info="not_deleted" x="11618" y="0"/>
-</item>
-<item historyLabel="AboutScreen.java" index="9">
-<position info="not_deleted" x="1068" y="0"/>
-</item>
-<item historyLabel="project.properties" index="10">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="ImageTargets.cpp" index="11">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="project.properties" index="10">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="ImageTargets.cpp" index="11">
-<position info="not_deleted" x="1119" y="0"/>
-</item>
-<item historyLabel="Beware.h" index="12">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="ImageTargets.cpp" index="11">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="Beware.h" index="12">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="ImageTargets.cpp" index="11">
-<position info="not_deleted" x="1137" y="0"/>
-</item>
-<item historyLabel="Beware.h" index="12">
-<position info="not_deleted" x="223" y="106"/>
-</item>
-<item historyLabel="ImageTargets.cpp" index="11">
-<position info="not_deleted" x="11564" y="0"/>
-</item>
-<item historyLabel="Beware.h" index="12">
-<position info="not_deleted" x="223" y="106"/>
-</item>
-<item historyLabel="ImageTargets.cpp" index="11">
-<position info="not_deleted" x="11564" y="0"/>
-</item>
-<item historyLabel="Beware.h" index="12">
-<position info="not_deleted" x="223" y="106"/>
-</item>
-<item historyLabel="ImageTargets.cpp" index="11">
-<position info="not_deleted" x="13693" y="0"/>
-</item>
-<item historyLabel="strings.xml" index="13"/>
-<item historyLabel="Beware.h" index="14">
-<position info="not_deleted" x="223" y="106"/>
-</item>
-<item historyLabel="ImageTargets.cpp" index="15">
-<position info="not_deleted" x="13693" y="0"/>
-</item>
-<item active="true" historyLabel="ImageTargets.cpp" index="15">
-<position info="not_deleted" x="0" y="0"/>
+<item active="true" historyLabel="ImageTargets.java" index="10">
+<position info="not_deleted" x="81" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -495,14 +518,41 @@
 </trimLayout>
 </window>
 <mruList>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ImageTargets.java" tooltip="ImageTargets/src/com/qualcomm/QCARSamples/ImageTargets/ImageTargets.java">
+<persistable path="/ImageTargets/src/com/qualcomm/QCARSamples/ImageTargets/ImageTargets.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Teapot.h" tooltip="ImageTargets/Teapot.h">
+<persistable path="/ImageTargets/Teapot.h"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="banana.h" tooltip="ImageTargets/jni/banana.h">
+<persistable path="/ImageTargets/jni/banana.h"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="ImageTargets.cpp" tooltip="ImageTargets/jni/ImageTargets.cpp">
+<persistable path="/ImageTargets/jni/ImageTargets.cpp"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ImageTargetsRenderer.java" tooltip="ImageTargets/src/com/qualcomm/QCARSamples/ImageTargets/ImageTargetsRenderer.java">
+<persistable path="/ImageTargets/src/com/qualcomm/QCARSamples/ImageTargets/ImageTargetsRenderer.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ImageTargetsRenderer.java" tooltip="ImageTests/src/com/qualcomm/QCARSamples/ImageTargets/ImageTargetsRenderer.java">
+<persistable path="/ImageTests/src/com/qualcomm/QCARSamples/ImageTargets/ImageTargetsRenderer.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ImageTargetsSplashScreen.java" tooltip="ImageTests/src/com/qualcomm/QCARSamples/ImageTargets/ImageTargetsSplashScreen.java">
+<persistable path="/ImageTests/src/com/qualcomm/QCARSamples/ImageTargets/ImageTargetsSplashScreen.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ImageTargets.java" tooltip="ImageTests/src/com/qualcomm/QCARSamples/ImageTargets/ImageTargets.java">
+<persistable path="/ImageTests/src/com/qualcomm/QCARSamples/ImageTargets/ImageTargets.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="CubeShaders.h" tooltip="ImageTargets/jni/CubeShaders.h">
+<persistable path="/ImageTargets/jni/CubeShaders.h"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Beware.h" tooltip="ImageTests/jni/Beware.h">
+<persistable path="/ImageTests/jni/Beware.h"/>
+</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="ImageTargets.cpp" tooltip="ImageTests/jni/ImageTargets.cpp">
 <persistable path="/ImageTests/jni/ImageTargets.cpp"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.CommonXmlEditor" name="strings.xml" tooltip="ImageTests/res/values/strings.xml">
 <persistable path="/ImageTests/res/values/strings.xml"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Beware.h" tooltip="ImageTests/jni/Beware.h">
-<persistable path="/ImageTests/jni/Beware.h"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.PropertiesFileEditor" name="project.properties" tooltip="ImageTargets/project.properties">
 <persistable path="/ImageTargets/project.properties"/>
@@ -512,30 +562,6 @@
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.manifest.ManifestEditor" name="AndroidManifest.xml" tooltip="ImageTests/AndroidManifest.xml">
 <persistable path="/ImageTests/AndroidManifest.xml"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Teapot.h" tooltip="ImageTests/jni/Teapot.h">
-<persistable path="/ImageTests/jni/Teapot.h"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="skull.h" tooltip="ImageTests/jni/skull.h">
-<persistable path="/ImageTests/jni/skull.h"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.CommonXmlEditor" name="camera_overlay.xml" tooltip="ImageTests/res/layout/camera_overlay.xml">
-<persistable path="/ImageTests/res/layout/camera_overlay.xml"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.CommonXmlEditor" name="colors.xml" tooltip="ImageTests/res/values/colors.xml">
-<persistable path="/ImageTests/res/values/colors.xml"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.CommonXmlEditor" name="splash_screen.xml" tooltip="ImageTests/res/layout/splash_screen.xml">
-<persistable path="/ImageTests/res/layout/splash_screen.xml"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="AboutScreen.java" tooltip="ImageTests/src/com/qualcomm/QCARSamples/ImageTargets/AboutScreen.java">
-<persistable path="/ImageTests/src/com/qualcomm/QCARSamples/ImageTargets/AboutScreen.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ImageTargetsSplashScreen.java" tooltip="ImageTests/src/com/qualcomm/QCARSamples/ImageTargets/ImageTargetsSplashScreen.java">
-<persistable path="/ImageTests/src/com/qualcomm/QCARSamples/ImageTargets/ImageTargetsSplashScreen.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.CommonXmlEditor" name="about_screen.xml" tooltip="ImageTests/res/layout/about_screen.xml">
-<persistable path="/ImageTests/res/layout/about_screen.xml"/>
 </file>
 </mruList>
 </workbench>

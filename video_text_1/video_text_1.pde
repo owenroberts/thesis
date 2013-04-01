@@ -16,6 +16,8 @@ void setup() {
 
   lines = loadStrings("lines-cat-01.txt");
 
+  
+
   video = new Capture(this, 640, 480);
   video.start();  
 
@@ -46,7 +48,7 @@ void draw() {
   
   
   fill(0);
-  text(lines[3], rectBorder + textBorder, video.height + rectBorder + textBorder, width - 2*rectBorder - 2*textBorder, height - video.height - 2*rectBorder - 2*textBorder);
+  text(lines[0], rectBorder + textBorder, video.height + rectBorder + textBorder, width - 2*rectBorder - 2*textBorder, height - video.height - 2*rectBorder - 2*textBorder);
   
   
   

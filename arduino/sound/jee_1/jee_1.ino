@@ -18,7 +18,7 @@ int purr[] = {
 };
 
 
-#define soundPin 5
+#define soundPin 15
 
 long constant = 30000;
 int notelength = 20;
@@ -35,6 +35,7 @@ void loop(){
 
   if (Serial.available()) {
     char ch = Serial.read();
+    Serial.println(ch);
 
     switch(ch) {
     case 'o':

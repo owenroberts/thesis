@@ -44,7 +44,7 @@
 #include "SampleUtils.h"
 #include "Texture.h"
 #include "CubeShaders.h"
-#include "Teapot.h"
+//#include "Teapot.h"
 #include "Beware.h"
 
 #ifdef __cplusplus
