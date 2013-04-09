@@ -27,12 +27,13 @@ boolean fadedone2 = false;
 float fade = 2000;
 int fadein = 15;
 int fadeout = 10;
-int margin = 10;
+int xm = 50;
+int ym = 25;
 
 boolean start = true;
 
 void setup() {
-  size(800, 400);
+  size(2560, 800);
   frame.removeNotify();
   frame.setUndecorated(true);
   frame.addNotify();
@@ -41,19 +42,17 @@ void setup() {
   myRemoteLocation = new NetAddress("127.0.0.1", 8000);
 
   PFont myFont = loadFont("SansSerif-14.vlw");
-  textFont(myFont, 14);
+  textFont(myFont, height/5);
   textAlign(LEFT, TOP);
-  textSize(20);
+  textLeading(height/5);
 
   lines = loadStrings("lines.txt");
-  
- 
 }
 
 void draw() {
   if (start) {
     start = false;
-    frame.setLocation(0, 20);
+    frame.setLocation(1680, 0);
   } 
   background(0);
 
@@ -76,7 +75,7 @@ void draw() {
       fadedone1 = false;
     }
   }
-  
+
   if (fade2) {
     if (timebool2) {
       fadetime2 = millis();
@@ -95,17 +94,30 @@ void draw() {
       fadedone2 = false;
     }
   }
-  
-  
+
+
   String[] m1 = match(lines[line], "0. = ");
-  if (m1[0].equals("01 = ")) {
-    thisline1 = lines[line].replace("01 = ", "");
-    fill(255, alpha1);
-    text(thisline1, margin, margin, width/2-2*margin, height - 2*margin);
-  } else if (m1[0].equals("02 = ")) {
-   thisline2 = lines[line].replace("02 = ", "");
-   fill(255, alpha2);
-   text(thisline2, width/2+margin, margin, width/2-2*margin, height - 2*margin);
+  if (m1 != null) {
+    if (m1[0].equals("01 = ")) {
+      thisline1 = lines[line].replace("01 = ", "");
+      if (thisline1.length() <= 5) {
+       textSize(height/2);
+      } else {
+       textSize(height/5);
+      } 
+      fill(255, alpha1);
+      text(thisline1, xm, ym, width/2-2*xm, height - 2*ym);
+    } 
+    else if (m1[0].equals("02 = ")) {
+      thisline2 = lines[line].replace("02 = ", "");
+      if (thisline2.length() <= 5) {
+       textSize(height/2);
+      } else {
+       textSize(height/5);
+      } 
+      fill(255, alpha2);
+      text(thisline2, width/2+xm, ym, width/2-2*xm, height - 2*ym);
+    }
   }
 }
 
@@ -113,7 +125,7 @@ void oscEvent(OscMessage theOscMessage)
 {  
   whichBot = theOscMessage.get(0).stringValue();
   line = theOscMessage.get(1).intValue();
-  
+
   if (whichBot.equals("1")) {
     fade1 = true;
   } 

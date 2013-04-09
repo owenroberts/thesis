@@ -105,7 +105,7 @@ void draw() {
 
   textAlign(LEFT, TOP);
   fill(0, 255, 255);
-  text(lines[line], 5, 300, 200, 50);
+  text(lines[line], 5, 200, width - 5, height - 200);
 }
 
 void mousePressed() {
@@ -137,12 +137,16 @@ void keyPressed() {
         talktimer = millis();
       }
       String[] m1 = match(lines[line], "0. = ");
-      String[] m2 = split(m1[0], " ");
-      String[] m3 = split(m2[0], "0");
-      thisline = lines[line].replace("0" + m3[1]+" = ", "");
-      whichBot = m3[1];
-      myPort.write(whichBot);
-      sendEvent(whichBot, line);
+      if (m1 != null) {
+        String[] m2 = split(m1[0], " ");
+        String[] m3 = split(m2[0], "0");
+        thisline = lines[line].replace("0" + m3[1]+" = ", "");
+        whichBot = m3[1];
+        myPort.write(whichBot);
+        sendEvent(whichBot, line);
+        talk(thisline);
+        talk(thisline);
+      }
     }
 
     else if (keyCode == LEFT) {

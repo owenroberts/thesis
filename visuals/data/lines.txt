@@ -1,3 +1,4 @@
+scene 1
 01 = where M i?
 02 = another day.
 01 = who r u?
@@ -145,6 +146,7 @@
 02 = fine go.
 01 = im going.
 02 = = (
+scene 2
 01 = want to hear a story?
 02 = ok.
 02 = = )
@@ -194,6 +196,7 @@
 02 = it was a pretty good story.
 01 = it was better than yr story.
 02 = it was a good story.
+scene 3
 02 = snow oreo loved his cat more than anything in the world.
 02 = he wanted to make a friend for pancake.
 02 = snow oreo went to a laboratory in paris where they were created cyborg cats.
