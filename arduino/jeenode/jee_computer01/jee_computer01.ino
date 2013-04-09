@@ -29,10 +29,10 @@ void loop () {
     char ch = Serial.read();
     Serial.println(ch);
     if (ch == 'o' || ch == 'u' || ch == 'i' || ch == 'p') {
-      payload[2] = ch;
+      payload[1] = ch;
     } 
     else {
-      payload[1] = ch;
+      payload[0] = ch;
     }
 
     needToSend = 1;

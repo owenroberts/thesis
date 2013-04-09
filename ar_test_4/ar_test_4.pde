@@ -73,6 +73,8 @@ void draw()
       //println("X:" + rotX +" and Y:" + rotY);
       translate(0, 30, -20);
       cat.draw();
+      textSize(100);
+      text("BEWARE THE CAT", 0,0);
     }
     nya.endTransform();
   }
