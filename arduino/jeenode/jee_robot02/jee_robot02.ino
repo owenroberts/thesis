@@ -8,22 +8,6 @@
 #include <JeeLib.h>
 #include <SoftwareServo.h>
 
-int freqs[] = {
-  18, 20, 40, 94, 220, 208, 233, 247, 262,
-  277, 294, 311, 330, 331, 332, 333,
-  330,331,332,333,334,335,336,337,338,339,
-  340,341,342,343,344,34330,331,332,333,334,
-  335,336,337,338,339,340,341,342,343,344,345,
-  346,347,348,349,350,351,352,353,354,355,356,
-  357,358,359,360,361,362,363,364,365,366,367,
-  368,369,370,371,372,373,374,375,376,377,378,
-  379,380,381,382,383,384,385,386,387,388,389,
-  390,391,392,393,394};
-  
-int purr[] = {
-  18, 19
-};
-
 
 MilliTimer sendTimer;
 char payload[] = "cv2";
@@ -96,29 +80,17 @@ void loop () {
     if (bot == '1') {
 
     switch(vh) {
-    case 'o':
-      for (int i = 0; i < 2; i++) {
-       tone(soundPin, random(220,260), 35);
-        delay(random(30, 100));
-      }
+      case 'o':
+      talk(1);
       break;
     case 'i':
-      for (int i = 0; i < 10; i++) {
-        tone(soundPin, random(220,260), 35);
-        delay(random(30, 100));
-      }
+      talk(5);
       break;
     case 'u':
-      for (int i = 0; i < 20; i++) {
-        tone(soundPin, random(220,260), 35);
-        delay(random(30, 100));
-      }
+      talk(10);
       break;
     case 'p':
-      for (int i = 0; i < 200; i++) {
-        tone(soundPin, random(220,260), 35);
-        delay(random(30, 100));
-      }
+      purr(10);
       break;
     }
 
@@ -161,7 +133,7 @@ void loop () {
 
       //spine right
     case 'z':
-      if (spineAngle < spineAngle + spineLimit) {
+      if (spineAngle < angle + spineLimit) {
         spineAngle += spineInt;
         spine.write(spineAngle);
       } 
@@ -169,7 +141,7 @@ void loop () {
 
       //spine left
     case 'x':
-      if (spineAngle > spineAngle - spineLimit) {
+      if (spineAngle > angle - spineLimit) {
         spineAngle -= spineInt;
         spine.write(spineAngle);
       }
@@ -240,10 +212,48 @@ void loop () {
       SoftwareServo::refresh();
       left.write(180-frontAngle);
       break;
-
-    }
+      
+    case 'k':
+      SoftwareServo::refresh();
+      right.write(frontAngle+40);
+      delay(400);
+      SoftwareServo::refresh();
+      SoftwareServo::refresh();
+      delay(400);
+      SoftwareServo::refresh();
+      right.write(frontAngle);
+      SoftwareServo::refresh();
+      break;
+      
+    case 'l':
+      SoftwareServo::refresh();
+      left.write(180-frontAngle-40);
+      delay(400);
+      SoftwareServo::refresh();
+      SoftwareServo::refresh();
+      delay(400);
+      SoftwareServo::refresh();
+      left.write(180-frontAngle);
+      SoftwareServo::refresh();
+      break;
+      
+    case 'm':
+      SoftwareServo::refresh();
+      back.write(backAngle-40);
+      delay(400);
+      SoftwareServo::refresh();
+      SoftwareServo::refresh();
+      delay(400);
+      SoftwareServo::refresh();
+      back.write(backAngle);
+      SoftwareServo::refresh();
+      break;
+      
 
     SoftwareServo::refresh();
+    }
+
+    
     needToSend = 1;
     }
 
@@ -257,6 +267,39 @@ void loop () {
     //Serial.println(payload[0]);
     rf12_sendStart(0, payload, sizeof payload);
     payload[0] = 'c';
+  }
+
+}
+
+void talk(int num) {
+  for (int j = 0; j < num; j++) {
+    for (int i = 0; i < random(3); i++) {
+      tone(soundPin, random(100,200), 30);
+      delay(random(20, 40));
+    }
+    delay(random(100, 200));
+  }
+
+}
+
+void purr(int num) {
+  for (int j = 0; j < num; j++) {
+    for (int i = 0; i < random(3); i++) {
+      tone(soundPin, random(100,200), 30);
+      delay(random(40, 80));
+    }
+  }
+  for (int j = 0; j < num; j++) {
+    for (int i = 0; i < random(3); i++) {
+      tone(soundPin, random(0,100), 30);
+      delay(random(40, 80));
+    }
+  }
+  for (int j = 0; j < num; j++) {
+    for (int i = 0; i < random(3); i++) {
+      tone(soundPin, random(150,200), 30);
+      delay(random(40, 80));
+    }
   }
 
 }

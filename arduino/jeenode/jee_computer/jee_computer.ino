@@ -8,7 +8,7 @@
 #include <JeeLib.h>
 
 MilliTimer sendTimer;
-char payload[] = "cv0";
+char payload[] = "a0";
 byte needToSend;
 int bot = 0;
 
@@ -29,12 +29,10 @@ void loop () {
   if (Serial.available()) {
     char ch = Serial.read();
     Serial.println(ch);
-    if (ch == 'o' || ch == 'u' || ch == 'i' || ch == 'p') {
-      payload[1] = ch;
-    } else if (ch == '1') {
-      payload[2] = '0';
+    if (ch == '1') {
+      payload[1] = '0';
     } else if (ch == '2') {
-     payload[2] = '1';
+     payload[1] = '1';
     } else {
       payload[0] = ch;
     }
@@ -48,7 +46,6 @@ void loop () {
     //Serial.println("BOT" + (String)bot);
     rf12_sendStart(0, payload, sizeof payload);
     payload[0] = 'c';
-    payload[1] = 'v';
   }
 
 }

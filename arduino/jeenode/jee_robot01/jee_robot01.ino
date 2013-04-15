@@ -19,7 +19,7 @@ int freqs[] = {
   368,369,370,371,372,373,374,375,376,377,378,
   379,380,381,382,383,384,385,386,387,388,389,
   390,391,392,393,394};
-  
+
 int purr[] = {
   18, 19
 };
@@ -92,159 +92,185 @@ void loop () {
     char vh = rf12_data[1];
     char ch = rf12_data[0];
     char bot = rf12_data[2];
-    
+
     if (bot == '0') {
 
-    switch(vh) {
-    case 'o':
-      for (int i = 0; i < 2; i++) {
-        tone(soundPin, freqs[random(sizeof(freqs))], 40);
-        delay(random(20, 80));
+      switch(vh) {
+      case 'o':
+        talk(2);
+        break;
+      case 'i':
+        talk(10);
+        break;
+      case 'u':
+        talk(20);
+        break;
+      case 'p':
+        pur(100);
+        break;
       }
-      break;
-    case 'i':
-      for (int i = 0; i < 10; i++) {
-        tone(soundPin, freqs[random(sizeof(freqs))], 40);
-        delay(random(20, 80));
-      }
-      break;
-    case 'u':
-      for (int i = 0; i < 20; i++) {
-        tone(soundPin, freqs[random(sizeof(freqs))], 40);
-        delay(random(20, 80));
-      }
-      break;
-    case 'p':
-      for (int i = 0; i < 200; i++) {
-        tone(soundPin, purr[random(sizeof(purr))], 40);
-        delay(random(5,20));
-      }
-      break;
-    }
 
 
-    switch(ch) {
+      switch(ch) {
 
-      //front legs forward
-    case 'w':
-      if (frontAngle < angle + limit) {
-        frontAngle += sitInt;
+        //front legs forward
+      case 'w':
+        if (frontAngle < angle + limit) {
+          frontAngle += sitInt;
+          right.write(frontAngle);
+          left.write(180-frontAngle);
+        }
+        break;
+
+        //front legs back
+      case 's':
+        if (frontAngle > limit) {
+          frontAngle -= sitInt;
+          right.write(frontAngle);
+          left.write(180-frontAngle);
+        }
+        break;
+
+        //back legs forward
+      case 'd':
+        if(backAngle < angle + limit) {
+          backAngle += sitInt;
+          back.write(backAngle);
+        }
+        break;
+
+        //back legs back
+      case 'f':
+        if (backAngle > limit) {
+          backAngle -= sitInt;
+          back.write(backAngle);
+        }
+        break;
+
+        //spine right
+      case 'z':
+        if (spineAngle < spineAngle + spineLimit) {
+          spineAngle += spineInt;
+          spine.write(spineAngle);
+        } 
+        break;
+
+        //spine left
+      case 'x':
+        if (spineAngle > spineAngle - spineLimit) {
+          spineAngle -= spineInt;
+          spine.write(spineAngle);
+        }
+        break;
+
+        //walk1
+      case 'r':
+        SoftwareServo::refresh();
+        right.write(frontAngle+20);
+        delay(100);
+        SoftwareServo::refresh();
+        SoftwareServo::refresh();
+        delay(100);
+        SoftwareServo::refresh();
         right.write(frontAngle);
-        left.write(180-frontAngle);
-      }
-      break;
+        SoftwareServo::refresh();
+        SoftwareServo::refresh();
+        SoftwareServo::refresh();
+        left.write(180-frontAngle-20);
+        delay(100);
+        SoftwareServo::refresh();
+        SoftwareServo::refresh();
+        delay(100);
+        SoftwareServo::refresh();
+        left.write(180 - frontAngle);
+        break;
 
-      //front legs back
-    case 's':
-      if (frontAngle > limit) {
-        frontAngle -= sitInt;
-        right.write(frontAngle);
-        left.write(180-frontAngle);
-      }
-      break;
-
-      //back legs forward
-    case 'd':
-      if(backAngle < angle + limit) {
-        backAngle += sitInt;
-        back.write(backAngle);
-      }
-      break;
-
-      //back legs back
-    case 'f':
-      if (backAngle > limit) {
-        backAngle -= sitInt;
-        back.write(backAngle);
-      }
-      break;
-
-      //spine right
-    case 'z':
-      if (spineAngle < spineAngle + spineLimit) {
-        spineAngle += spineInt;
-        spine.write(spineAngle);
-      } 
-      break;
-
-      //spine left
-    case 'x':
-      if (spineAngle > spineAngle - spineLimit) {
-        spineAngle -= spineInt;
-        spine.write(spineAngle);
-      }
-      break;
-
-      //walk1
-    case 'r':
-      SoftwareServo::refresh();
-      right.write(frontAngle+20);
-      delay(100);
-      SoftwareServo::refresh();
-      SoftwareServo::refresh();
-      delay(100);
-      SoftwareServo::refresh();
-      right.write(frontAngle);
-      SoftwareServo::refresh();
-      SoftwareServo::refresh();
-      SoftwareServo::refresh();
-      left.write(180-frontAngle-20);
-      delay(100);
-      SoftwareServo::refresh();
-      SoftwareServo::refresh();
-      delay(100);
-      SoftwareServo::refresh();
-      left.write(180 - frontAngle);
-      break;
-      
       case 't':
-      SoftwareServo::refresh();
-      right.write(frontAngle-20);
-      delay(100);
-      SoftwareServo::refresh();
-      SoftwareServo::refresh();
-      delay(100);
-      SoftwareServo::refresh();
-      right.write(frontAngle);
-      SoftwareServo::refresh();
-      SoftwareServo::refresh();
-      SoftwareServo::refresh();
-      left.write(180-frontAngle+20);
-      delay(100);
-      SoftwareServo::refresh();
-      SoftwareServo::refresh();
-      delay(100);
-      SoftwareServo::refresh();
-      left.write(180-frontAngle);
-      break;
+        SoftwareServo::refresh();
+        right.write(frontAngle-20);
+        delay(100);
+        SoftwareServo::refresh();
+        SoftwareServo::refresh();
+        delay(100);
+        SoftwareServo::refresh();
+        right.write(frontAngle);
+        SoftwareServo::refresh();
+        SoftwareServo::refresh();
+        SoftwareServo::refresh();
+        left.write(180-frontAngle+20);
+        delay(100);
+        SoftwareServo::refresh();
+        SoftwareServo::refresh();
+        delay(100);
+        SoftwareServo::refresh();
+        left.write(180-frontAngle);
+        break;
 
 
 
-    case 'e':
-      SoftwareServo::refresh();
-      right.write(frontAngle+20);
-      delay(200);
-      SoftwareServo::refresh();
-      SoftwareServo::refresh();
-      delay(200);
-      SoftwareServo::refresh();
-      right.write(frontAngle);
-      SoftwareServo::refresh();
-      SoftwareServo::refresh();
-      SoftwareServo::refresh();
-      left.write(180-frontAngle-20);
-      delay(200);
-      SoftwareServo::refresh();
-      SoftwareServo::refresh();
-      delay(200);
-      SoftwareServo::refresh();
-      left.write(180-frontAngle);
-      break;
+      case 'e':
+        SoftwareServo::refresh();
+        right.write(frontAngle+20);
+        delay(200);
+        SoftwareServo::refresh();
+        SoftwareServo::refresh();
+        delay(200);
+        SoftwareServo::refresh();
+        right.write(frontAngle);
+        SoftwareServo::refresh();
+        SoftwareServo::refresh();
+        SoftwareServo::refresh();
+        left.write(180-frontAngle-20);
+        delay(200);
+        SoftwareServo::refresh();
+        SoftwareServo::refresh();
+        delay(200);
+        SoftwareServo::refresh();
+        left.write(180-frontAngle);
+        break;
 
-    }
+      case 'k':
+        SoftwareServo::refresh();
+        right.write(frontAngle+40);
+        delay(400);
+        SoftwareServo::refresh();
+        SoftwareServo::refresh();
+        delay(400);
+        SoftwareServo::refresh();
+        right.write(frontAngle);
+        SoftwareServo::refresh();
+        break;
 
-    SoftwareServo::refresh();
-    needToSend = 1;
+      case 'l':
+        SoftwareServo::refresh();
+        left.write(180-frontAngle-40);
+        delay(400);
+        SoftwareServo::refresh();
+        SoftwareServo::refresh();
+        delay(400);
+        SoftwareServo::refresh();
+        left.write(180-frontAngle);
+        SoftwareServo::refresh();
+        break;
+
+      case 'm':
+        SoftwareServo::refresh();
+        back.write(backAngle-40);
+        delay(400);
+        SoftwareServo::refresh();
+        SoftwareServo::refresh();
+        delay(400);
+        SoftwareServo::refresh();
+        back.write(backAngle);
+        SoftwareServo::refresh();
+        break;
+
+        SoftwareServo::refresh();
+
+      }
+
+
+      needToSend = 1;
     }
 
   }
@@ -257,9 +283,25 @@ void loop () {
     //Serial.println(payload[0]);
     rf12_sendStart(0, payload, sizeof payload);
     payload[0] = 's';
+    payload[1] = 'v';
   }
 
 }
+
+void talk(int num) {
+
+  for (int i = 0; i < num; i++) {
+    tone(soundPin, freqs[random(sizeof(freqs))], 40);
+    delay(random(20, 80));
+  }
+}
+void pur(int num) {
+  for (int i = 0; i < num; i++) {
+    tone(soundPin, purr[random(sizeof(purr))], 40);
+    delay(random(5,20));
+  }
+}
+
 
 
 
