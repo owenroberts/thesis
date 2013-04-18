@@ -43,7 +43,7 @@ void setup() {
   textField = controlP5.addTextfield("enter", 100, 10, 200, 20);
   textField.setSize(200, 20);
 
-  lines = loadStrings("lines.txt");
+  lines = loadStrings("no2.txt");
 }
 
 void draw() {

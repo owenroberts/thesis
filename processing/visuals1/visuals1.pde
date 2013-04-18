@@ -53,7 +53,7 @@ void setup() {
   font02 = loadFont("ComicSansMS-100.vlw");
 
 
-  lines = loadStrings("lines.txt");
+  lines = loadStrings("no2.txt");
   background(0);
 }
 
